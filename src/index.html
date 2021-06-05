@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Multi Session Browser</title>
+  <link rel="stylesheet" href="./fonts/whitney/stylesheet.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div id="preload" class="preload">
+    <div class="preload-title">SuperBrowser</div>
+    <div class="preload-subtitle">Multiple sessions in one browser.</div>
+  </div>
+  <div id="app" class="app" style="display:none;">
+    <div class="tabs-wrapper">
+      <div id="home-tab" class="tab">
+        <div class="tab-circle">
+          <svg class="home-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+        x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
+            <g><g><polygon points="256,152.96 79.894,288.469 79.894,470.018 221.401,470.018 221.401,336.973 296.576,336.973 296.576,470.018     432.107,470.018 432.107,288.469   " /></g></g>
+            <g><g><polygon points="439.482,183.132 439.482,90.307 365.316,90.307 365.316,126.077 256,41.982 0,238.919 35.339,284.855     256,115.062 476.662,284.856 512,238.92   " /></g></g>
+          </svg>
+        </div>
+      </div>
+      <div class="tab-hr"></div>
+      <div id="side-sessions" class="side-sessions"></div>
+    </div>
+    <div class="app-screen">
+      <div id="modals-screen" class="screen modals-screen" style="display:none;">
+        <div class="modal">
+          <div class="modal-header">Add a new session</div>
+          <div class="modal-body">
+            <div class="input-field">
+              <div class="input-field-name">Session name</div>
+              <div class="input-field-placeholder">
+                <input id="new-session-name" class="input-text" type="text" placeholder="Session name">
+              </div>
+            </div>
+            <div class="input-field">
+              <div class="input-field-name">Target URL</div>
+              <div class="input-field-placeholder">
+                <input id="new-session-url" class="input-text" type="text" placeholder="Target URL">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="cancel-create-session">Cancel</div>
+            <div id="btn-create-session" class="btn-create-session">Create</div>
+          </div>
+        </div>
+      </div>
+      <div id="home-screen" class="screen">
+        <h1>My sessions</h1>
+        <div id="sessions-pre-wrapper" class="sessions-pre-wrapper">
+          <div id="empty-session-text" class="empty-session-text" style="display:none;">You don't have any session stored.</div>
+          <div id="sessions-wrapper" class="sessions-wrapper"></div>
+        </div>
+        <div class="btn-new-session" id="btn-new-session">Add a new session</div>
+      </div>
+      <div id="webviews-wrapper" class="webviews-wrapper" style="display:none;"></div>
+    </div>
+  </div>
+  <script src="./js/hooks.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/dom-setup.js"></script>
+  <script src="./js/session.js"></script>
+  <script src="./js/listeners.js"></script>
+  <script src="./js/templates.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>
